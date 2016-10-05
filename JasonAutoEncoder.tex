@@ -1,0 +1,22 @@
+\documentclass{article}
+
+\begin{document}
+Jason wrote: {- There exists some P(X) that we'd like to model (distribution of clean data)
+ - However, we only have samples from a noisy version, Q(X), where
+Q(X) is the distribution of X + N, and N is drawn from some corruption distribution C(N, t) parameterized by a scalar. For example, C(N, t) could be Gaussian(mean=0, var=t^2)
+- Assume that t = 0 is the case of adding no noise, and (without loss of generality) t = 1 parameterizes the C leading to the Q that we actually observe. In other words:
+    - Sampling rule for P(X): Sample X from P(X) and corrupt with C(N,
+t=0) (so not at all)
+    - Sampling rule for Q(X): Sample X from P(X) and corrupt with C(N, t=1)
+ - Assume that we have access to the form of C(N, t) and can draw samples from it for arbitrary t
+
+ Now, create a dataset consisting of pairs of samples (X, t), where (X, 1) samples come from the noisy observations, (X, 1.5) come from adding an extra .5 of noise, (X, 2.0), from adding an extra 1.0 of noise, etc.
+
+ Using this labeled dataset, train a network (with one input and one output) to predict t from X.
+ Train another network (with two inputs and one output) to map from a noisy version of X to one less noisy by a specific amount t_delta, e.g. when given as input an X from the (X, 2) set and t_delta = -1, the network should produce the corresponding sample from (X, 1).
+
+ The demo: give new noisy samples to the first network, use it to predict the amount of noise t_hat that was added, and run the second network with -t_hat to return (hopefully) a noise-free version.
+
+}
+
+\end{document}
