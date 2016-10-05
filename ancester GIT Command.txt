@@ -1,0 +1,19 @@
+## How to publish a project
+$ cd /path/to/repo
+$ git checkout -b gh-pages ## The branch name gh-pages is a special branch that github uses to get files to build and publish from.
+$ git push origin gh-pages
+
+##commit deleted files
+git add -u . 
+
+## set the push command for matching repo which have same name
+git config --global push.default matching
+
+
+## github READ.md format
+![name](link) picture
+[name](link) url link
+## head
+
+
+git clean -fd ## git clean unchanged files

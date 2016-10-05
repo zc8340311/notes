@@ -1,0 +1,24 @@
+module load python27    ##load
+module -t avail
+
+
+qlogin
+qstat -u czhou2
+
+pip install --user --upgrade theano 
+
+$ qsub -cwd -j y -S $(which python) commandLineDouble.py
+
+du -hs ~ ## check the file size
+df -h ## how many disk left
+
+ln -s /usr/lib64/liblapack.so.3 /home/czhou2/root/lib/liblapack.so
+ln -s /usr/lib64/libblas.so.3 /home/czhou2/root/lib/libblas.so
+
+export BLAS=/home/czhou2/root/lib
+export LAPACK=/home/czhou2/root/lib
+
+
+qdel jobNumber ##delete a job
+
+gzip -d file.gz ##unpack the .gz file
