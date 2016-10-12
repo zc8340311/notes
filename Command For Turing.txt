@@ -5,7 +5,7 @@ module -t avail
 qlogin
 qstat -u czhou2
 
-pip install --user --upgrade theano 
+pip install --user --upgrade theano
 
 $ qsub -cwd -j y -S $(which python) commandLineDouble.py
 
@@ -22,3 +22,6 @@ export LAPACK=/home/czhou2/root/lib
 qdel jobNumber ##delete a job
 
 gzip -d file.gz ##unpack the .gz file
+
+##copy file content to clip
+cat ~/.ssh/id_rsa.pub | xclip -sel clip

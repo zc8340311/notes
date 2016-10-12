@@ -1,5 +1,5 @@
 \documentclass[twocolumn]{article}
-
+\usepackage{mathtools}
 \begin{document}
 \section{Basic Usage}
 Tensorflow is a programming system in which you represent computation as graphs.\\
@@ -9,6 +9,23 @@ A tensor is a typed multidiemtnsional array. \\
 A graph must be lauched in a Session. A session places methods to execute them (Cpu, Gpu). \\
 These methods return tensors produced by ops as numpy ndarray objects in python.
 
+\subsection{Tensors}
+Tensorflow use a tensor data structure to represent all data- only tensors are pass ed between  operations in the comptuation graph.
+A tensor has static type a rank and a shape. \\
+A Tensor rank is not the same as matrix rank. Tensor rank  is the number of dimensions of the tensor. Rank 0 means Scalar, Rank 1 means vactor and rank 2 = matrix rank 3 = 3-Tensor (cube of numbers)
+\subsection{Variables}
+variables represent the state in computation grapgh and it won't be excuted/performed until the session run method.
 
+\subsection{Fetches}
+to fetch the output of operations execute the graph with a run() call on the Session object and pass in the tensors to retrive.
+\subsection{Feeds}
+Feeds is a mechanism for patching a tensor directly into any operation in the graph.
+A feed temporarily replace the output of an operation with a tensor value. When call run(), you need to give its value as run([output1,output2],{holdername1 : value1, holdername2 : value2})
+
+
+
+
+
+Todo read tensorflow API on How to s and basic instruction.
 
 \end{document}
