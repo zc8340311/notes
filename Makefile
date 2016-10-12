@@ -1,0 +1,7 @@
+all:
+	latexmk -pdf RobustAutoencoder.tex
+
+clean:
+	rm -rf *~ *.log *.aux *.nav *.out *.snm *.synctex.gz *.toc *.tdo *.dvi auto *.fls *.fdb_latexmk *.bbl *.blg _region_.tex
+
+
