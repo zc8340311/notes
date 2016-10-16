@@ -4,7 +4,7 @@ $ git checkout -b gh-pages ## The branch name gh-pages is a special branch that 
 $ git push origin gh-pages
 
 ##commit deleted files
-git add -u . 
+git add -u .
 
 ## set the push command for matching repo which have same name
 git config --global push.default matching
@@ -17,3 +17,21 @@ git config --global push.default matching
 
 
 git clean -fd ## git clean unchanged files
+
+## Play with the SSH:
+
+## show the ssh version
+ssh -V
+
+## cd to ssh folder ~/.ssh and list ls -a
+
+## Generate ssh keys
+ssh-keygen
+## add you ssh keys
+ssh-add ~/.ssh/id_rsa
+## list all keys
+ssh-add -l
+
+## copy ssh keys
+cat ~/.ssh/id_rsa.pub | xclip -sel clip
+## then paste the ssh key to the cloud ssh key setting area

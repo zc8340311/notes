@@ -25,3 +25,11 @@ gzip -d file.gz ##unpack the .gz file
 
 ##copy file content to clip
 cat ~/.ssh/id_rsa.pub | xclip -sel clip
+
+#bash
+>> # output to file, append
+> ## write something new 
+
+# system control service
+sudo systemctl restart cups.service
+
