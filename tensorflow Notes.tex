@@ -1,4 +1,4 @@
-\documentclass[twocolumn]{article}
+\documentclass{article}
 \usepackage{mathtools}
 \begin{document}
 \section{Basic Usage}
@@ -22,10 +22,11 @@ to fetch the output of operations execute the graph with a run() call on the Ses
 Feeds is a mechanism for patching a tensor directly into any operation in the graph.
 A feed temporarily replace the output of an operation with a tensor value. When call run(), you need to give its value as run([output1,output2],{holdername1 : value1, holdername2 : value2})
 
+\section{Problem Records}
+\subsection{logloss in theano does not work on the tensorflow}
+logloss $  \dfrac{1}{N}\sum_{N} \sum_{j} target * \log predict + (1 -target) * \log (1-predict) $ use log, when the predict close to 1 or close to 0 the result will will really large and return nan. Use other loss, like build-in log loss, but seem this loss can not give the a clear reconstruction. The reconstruction picture looks not very clear. 
 
 
-
-
-Todo read tensorflow API on How to s and basic instruction.
+(In my understanding, this log loss is the feature-wise loss, calculate the difference on each features the reduce to mean.)
 
 \end{document}
