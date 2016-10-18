@@ -20,7 +20,7 @@ variables represent the state in computation grapgh and it won't be excuted/perf
 to fetch the output of operations execute the graph with a run() call on the Session object and pass in the tensors to retrive.
 \subsection{Feeds}
 Feeds is a mechanism for patching a tensor directly into any operation in the graph.
-A feed temporarily replace the output of an operation with a tensor value. When call run(), you need to give its value as run([output1,output2],{holdername1 : value1, holdername2 : value2})
+A feed temporarily replace the output of an operation with a tensor value. When call run(), you need to give its value as run ([output1, output2], {holdername1 : value1, holdername2 : value2})
 
 \section{Problem Records}
 \subsection{logloss in theano does not work on the tensorflow}
