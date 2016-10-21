@@ -1,0 +1,82 @@
+## import matplot
+from matplotlib import pyplot as plt
+%matplotlib inline 
+plt.show()
+
+#### Single plot ####
+
+## set fig size
+plt.figure(figsize=(10,8))
+
+## set label and title
+plt.xlabel("x")
+plt.ylabel("f(x)")
+plt.title("Function")
+
+## set color
+c = 'b'
+b: blue, g: green, r: red, c: cyan, m: magenta, y: yellow, k: black, w: white,
+
+## set legend
+# set label first
+plt.plot(dae_error,color="r",label="DAE")
+# according to the label order, set the legend
+plt.legend(["RobustAE","NormalAE","Raw","Pca"],loc='upper left')
+
+## set color map
+from matplotlib import cm
+cmap=cm.coolwarm
+
+## scatter plot dot size
+s=250
+
+#### Subplot ####
+
+## create subplot 
+fig,ax = plt.subplots(ncols=9,nrows=9)
+
+## subplotm ax[i][j] suppose take any single plot object
+
+## multiplot set plot size          
+fig.set_size_inches(11,9)
+
+## set title
+ax[i][j].set_title("title")
+## set x,y axis visible
+ax[i][j].axes.get_yaxis().set_visible(False)
+
+## color map
+cmap="gray"
+
+## save plot
+plt.savefig(r"file_name.png")
+
+#### Additional ####
+
+## read image
+from scipy.misc import imread as imread
+imread(r"file_location.png")
+
+## save images in the .py document
+# Force matplotlib to not use any Xwindows backend.
+matplotlib.use('Agg')
+plt.savefig("PCAprojection")
+
+#### 3D plot ####
+result =pd.read_csv(r"grid_search_result.csv")
+## result is every row is corruption,lambda and value
+cor_list = [10,20,350,400,450]
+lam_list = [0.1,1.,100.] 
+rows = len(cor_list) 
+cols = len(lam_list)
+%matplotlib
+fig = plt.figure(figsize=(10,7))
+ax = fig.gca(projection='3d')
+## X, Y, Z all of them must be a matrix
+ax.plot_surface(result.corruption.reshape(rows,cols), result.lamda.reshape(rows,cols), 
+                result.rdae.reshape(rows,cols),color="b",alpha=0.3,label="Robust AE")
+ax.plot_surface(result.corruption.reshape(rows,cols), result.lamda.reshape(rows,cols), 
+                result.dae.reshape(rows,cols),color="r",alpha=0.3,label="Normal AE")
+ax.plot_surface(result.corruption.reshape(rows,cols), result.lamda.reshape(rows,cols), 
+                result.base.reshape(rows,cols),color="y",alpha=0.3,label="Base model")
+plt.show()
