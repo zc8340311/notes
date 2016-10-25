@@ -18,6 +18,10 @@ git config --global push.default matching
 
 git clean -fd ## git clean unchanged files
 
+git reset --merge
+git merge master ## merge master branch to current
+
+
 ## Play with the SSH:
 
 ## show the ssh version
@@ -35,3 +39,5 @@ ssh-add -l
 ## copy ssh keys
 cat ~/.ssh/id_rsa.pub | xclip -sel clip
 ## then paste the ssh key to the cloud ssh key setting area
+
+
