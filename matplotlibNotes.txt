@@ -62,6 +62,10 @@ imread(r"file_location.png")
 matplotlib.use('Agg')
 plt.savefig("PCAprojection")
 
+#### Usage of Imshow ####
+image = Image.fromarray(I.tile_raster_images(X = data,img_shape=(28,28), tile_shape=(3, 3),tile_spacing=(1, 1)))
+plt.imshow(image,cmap='gray')
+
 #### 3D plot ####
 result =pd.read_csv(r"grid_search_result.csv")
 ## result is every row is corruption,lambda and value

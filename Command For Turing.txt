@@ -33,3 +33,6 @@ cat ~/.ssh/id_rsa.pub | xclip -sel clip
 # system control service
 sudo systemctl restart cups.service
 
+passwd ## change password
+
+find . -name "*.rar" -type f  ##recursively find files and delete
