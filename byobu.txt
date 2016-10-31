@@ -6,6 +6,9 @@ ctrl-shift-f2 # create a new session
 
 f3/f4 #move focus among windows
 
+f6 ## detach from the byobu session
+
+alter + up/down to move between sessions
 
 byobu-tmux new-session ## create a new session while other program running, go to normal bash and run this.
 
