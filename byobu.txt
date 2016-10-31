@@ -12,6 +12,10 @@ alter + up/down to move between sessions
 
 byobu-tmux new-session ## create a new session while other program running, go to normal bash and run this.
 
+byobu -S <session-name> ## create a new session while other program running, go to normal bash and run this.
+
+byobu rename -t <session-name> <new-session-name> ## rename the session
+
 byobu list-sessions ## list all sessions
 
 byobu new-session -t <number> ## go to certain session.
