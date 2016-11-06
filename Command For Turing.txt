@@ -36,3 +36,5 @@ sudo systemctl restart cups.service
 passwd ## change password
 
 find . -name "*.rar" -type f  ##recursively find files and delete
+
+top ## show the CPU and memory use
