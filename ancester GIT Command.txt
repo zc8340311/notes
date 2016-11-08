@@ -39,9 +39,3 @@ ssh-add -l
 ## copy ssh keys
 cat ~/.ssh/id_rsa.pub | xclip -sel clip
 ## then paste the ssh key to the cloud ssh key setting area
-
-scp <file> <username>@<IP address or hostname>:<Destination> #secure file transfer command
-
-sftp username@host ## start an SFTP session
-{ls:list, pwd: show the current path, rename: rename a file on remote computer, rm: remove file from remote, rmdir: remove a dictionary, put: copy a file from local to remote, get: copy a file from remote to local. lcd:change local path, lls: list local, lmkdir: mkdir local, lpwd: show the local path, chmod: change permission of remote file}
-

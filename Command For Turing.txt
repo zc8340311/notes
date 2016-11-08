@@ -38,3 +38,19 @@ passwd ## change password
 find . -name "*.rar" -type f  ##recursively find files and delete
 
 top ## show the CPU and memory use
+
+scp <file> <username>@<IP address or hostname>:<Destination> #secure file transfer command
+
+sftp username@host ## start an SFTP session
+{ls:list, pwd: show the current path, rename: rename a file on remote computer, rm: remove file from remote, rmdir: remove a dictionary, put: copy a file from local to remote, get: copy a file from remote to local. lcd:change local path, lls: list local, lmkdir: mkdir local, lpwd: show the local path, chmod: change permission of remote file}
+
+cat /proc/cpuinfo | grep 'model name' | uniq  ## check CPU
+
+## Install PIL Pillow
+apt-get install python-dev
+apt-get install libjpeg-dev
+apt-get install libjpeg8-dev
+apt-get install libpng3 
+apt-get install libfreetype6-dev
+
+pip install Pillow
