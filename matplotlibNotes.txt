@@ -13,6 +13,9 @@ plt.xlabel("x")
 plt.ylabel("f(x)")
 plt.title("Function")
 
+## xticks
+plt.xticks(range(len(lamda_list)), lamda_list)
+
 ## set color
 c = 'b'
 b: blue, g: green, r: red, c: cyan, m: magenta, y: yellow, k: black, w: white,

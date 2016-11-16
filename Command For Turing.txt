@@ -54,3 +54,5 @@ apt-get install libpng3
 apt-get install libfreetype6-dev
 
 pip install Pillow
+
+sudo apt-get install python-PIL
