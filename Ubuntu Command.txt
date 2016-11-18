@@ -56,3 +56,14 @@ apt-get install libfreetype6-dev
 pip install Pillow
 
 sudo apt-get install python-PIL
+
+
+## install lapack/blas
+sudo apt-get install libblas-dev liblapack-dev
+sudo apt-get install gfortran
+
+## install pip
+sudo apt-get install python-pip
+
+## install python-dev
+sudo apt-get install python-dev
