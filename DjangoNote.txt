@@ -11,6 +11,21 @@ django-admin startproject mysite
 #manage.py: A command-line utility that lets you interact with this Django project in various ways. You can read all the details about manage.py
 #The inner mysite/ directory is the actual Python package for your project. Its name is the Python package name you’ll need to use to import anything inside it
 #mysite/__init__.py: An empty file that tells Python that this directory should be considered a Python package.
-#mysite/settings.py: Settings/configuration for this Django project. Django settings will tell you all about how settings work.
+#mysite/settings.py: Settings/configuration for this Django project. Django settings will tell you all about how settings work. allowed_host = [], installed_apps = () root_url
 #mysite/urls.py: The URL declarations for this Django project; a “table of contents” of your Django-powered site. You can read more about URLs in URL dispatcher.
 #mysite/wsgi.py: An entry-point for WSGI-compatible web servers to serve your project. See How to deploy with WSGI for more details.
+
+## runsever
+python manage.py runserver 127.0.0.1:8080
+## 
+python manage.py shell
+
+## interact with database
+python manage.py migrate
+python manage.py makemigration
+
+## add a app
+python manage.py startapp blog
+	#then edit setting.py add 'blog', to the INSTALLED_APPS tuple 
+
+## the list 	
