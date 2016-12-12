@@ -14,7 +14,7 @@ plt.ylabel("f(x)")
 plt.title("Function")
 
 ## xticks
-plt.xticks(range(len(lamda_list)), lamda_list)
+plt.xticks(range(len(lamda_list)), lamda_list,rotation='vertical')
 
 ## set color
 c = 'b'
@@ -25,7 +25,8 @@ b: blue, g: green, r: red, c: cyan, m: magenta, y: yellow, k: black, w: white,
 plt.plot(dae_error,color="r",label="DAE")
 # according to the label order, set the legend
 plt.legend(["RobustAE","NormalAE","Raw","Pca"],loc='upper left')
-
+# set legend size
+plt.legend(["f1","precision","recall","sparse"],loc='best',prop={'size':7})
 ## set color map
 from matplotlib import cm
 cmap=cm.coolwarm
