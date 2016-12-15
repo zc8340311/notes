@@ -3,6 +3,10 @@ $ cd /path/to/repo
 $ git checkout -b gh-pages ## The branch name gh-pages is a special branch that github uses to get files to build and publish from.
 $ git push origin gh-pages
 
+## published link
+Project link: ["link_name"](https://your_account.github.io/project_name/)
+
+
 ##commit deleted files
 git add -u .
 
