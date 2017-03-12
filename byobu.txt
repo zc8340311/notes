@@ -1,5 +1,6 @@
 shift-f1 #display help
 f2 #create a new window
+ctrl + D # close a window
 shift-f2 # create a horizontal split
 ctrl-f2 # create a vertical split 
 ctrl-shift-f2 # create a new session
