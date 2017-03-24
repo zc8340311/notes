@@ -1,0 +1,51 @@
+who %% to see all the variables
+whos %% details about all variables
+
+clc %% clean screen
+clear var1 %% free the var1 space
+disp() %% print something on screen
+
+%% for loop
+for i=l %% i is iterate object,l is a list
+	disp(i)
+end;
+
+%% if 
+%% and &, or |, not ~
+if score ~= 0
+	disp('GGOOAAALLL – the score is ');
+	disp(score);
+elseif score ~= 1
+	disp(score);
+else 
+	disp(score)
+end;
+
+
+zeros(m,n) ones(m,n) eye(m,n) rand(m,n) %% random in 0,1
+a' %% a transpose
+l = 10 : 2: 20 %% start from 10, step is 2, end is 20(include 10 and 20)
+
+%% 
+
+%% if we use ";", nothing printout. without ";", matlab will print result
+
+%% shuffle data 
+idx = randperm(n);
+shuffledA = A(idx)
+
+%% random 
+X = rand %% X from (0,1)
+X = rand(n) %% n*n of random matrix
+X = rand(sz1,...,szN) %% different size of matrxi
+X = rand(sz) %% random with same shape of sz
+
+
+p = randperm(n) %%shuffle n
+p = randperm(n,k) %% k selected from n
+
+
+
+
+helpwin %% launch the help window
+help ops %% to see the help of matlab operators 
