@@ -26,5 +26,39 @@ pivot_data = data.pivot('rowkey_name','columnkey_name','item_name')
 ## data transformation
 ## removing duplicates
 data.duplicated()
-data.drop_duplicates()
+data.drop_duplicates(['column1','column2'],take_last=True) ## by default, take_last is false
+
+## data Transforming Using a function or mapping
+data['new_column'] = data['col1'].map(str.lower).map(a_lambda_fun).map(a_dictionary)
+## replacing
+data.replace(-999,np.nan)
+data.replace([1,2],[3,4])
+
+## discretization and bining
+ages = [20, 22, 25, 27, 21, 23, 37, 31, 61, 45, 41, 32]
+bins = [18,25,35,60,100]
+categories = pd.cut(ages,bins,labels=label_list)
+## cut into quatiles
+numerical = pd.qcut(data,4)
+pd.qcut(data,[0,0.1,0.5,0.9,1.0])
+
+## count
+pd.value_count(cates)
+
+## Permutation and random sampling
+sampler_index = np.random.permutation(5)
+data.take(sampler_index)
+
+## Computing Indicator / Dummy variables
+dummy_frame = pd.get_dummies(data['cate_col_name'],prefix='key')
+
+## String Manipulation
+s.split(),s.strip(),"".join(alist)
+s.index(',') #raise ValueError, s.find(','), s.rfind(',') ## return -1
+
+## count occurrences of a string
+s.count(',')
+
+
+
 
