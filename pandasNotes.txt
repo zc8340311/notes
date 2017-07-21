@@ -1,0 +1,30 @@
+import pandas as pd
+
+## combining and merging data sets
+pd.merge(A,B,on='comlumn_name')
+pd.merge(A,B, left_on='A_column_name',right_on='B_column_name',how='right') ##how could be left, right, outer. 
+##default inner which means intersection.
+## Merge on index left_index=True, right_index=True
+pd.merge(A,B,left_index=True) ##use index of A to merge data
+
+## Concatenating along an axis
+newdata = np.concatenate([A,B],axis=0)
+
+pd.concat([A,B,C], axis=0)
+
+## combine data with overlap
+new_serise = seriseB.combine_first(seriseA) ## element of new serise will be non-NAN from A or B, if conflicts choose from A.
+
+## Reshaping data with Hierarchical Indexing
+s_data = data.stack() add another ``index''
+s_data.unstack()
+
+## pivoting 'long' to 'wide' format
+#### data is stored in long format which means multiple(2) columns are the primary key
+pivot_data = data.pivot('rowkey_name','columnkey_name','item_name')
+
+## data transformation
+## removing duplicates
+data.duplicated()
+data.drop_duplicates()
+
