@@ -58,7 +58,48 @@ s.index(',') #raise ValueError, s.find(','), s.rfind(',') ## return -1
 
 ## count occurrences of a string
 s.count(',')
+## ljust and rjust
+s.ljust(50,'0') ## filling the blank until reach length of 50.
 
 
+## Regular expression
+import re
+re.split('\s+',text) ##'\s+' is a regular expression which is first compiled then applied on text using split method.
+## To reuse the regular expression '\s+', we could compile an regular expression as an compiled object.
+rex = re.compile('\s+')
+rex.split(text)
+rex.findall(text) ## finditer maybe better
+m = rex.search(text) ## m is a Match object which means index, using m.start() m.end()
+rex.sub('REPLACE',text) ## replace matched part
+
+#Data Aggregation and Group Operations
+
+data.groupby(data['col1']).mean()
+data.groupby([data['col1'],data['col2']]).mean()
+## agg function : mean, size, sum, min, max, quantile(0.75), prod, first, last, std, var
+
+for (k1,k2), group in data.groupby([data['col1'],data['col2']])
+    print k1,k2
+    print group
+    
+## make a slice and slice on it
+pieces = dict(list(data.groupby('col1')))
+pieces['b']
+
+grouped_data = data.grouped('key1')
+grouped_data.agg(['fun1','fun2','fun3'])
 
 
+## Group-wise operation and transformation
+####transform applies a function on each group
+data.groupby(key).transform(np.mean)
+
+## apply function accept parameters.
+data.groupby(key).apply(fun1,n=1,colum='col1')
+data.sort_index(by='col1')
+
+##  pivot table and cross-tabulation
+
+data.pivot_table(values=['col4'],rows=['col1','col2'],cols='col3',aggfun=fun1,margins=True) ## margins means that partial addition
+
+data.crosstab(data.col1,data.col2,margins=True)
