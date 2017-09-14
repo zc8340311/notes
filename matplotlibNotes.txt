@@ -35,7 +35,15 @@ cmap=cm.coolwarm
 ## scatter plot dot size
 s=250
 
-#### Subplot ####
+##line style
+linestyles = ['-', '--', '-.', ':']
+linestyle=":"
+
+## Tight layout 
+# for reducing margin and reducing the overlap
+plt.tight_layout()
+
+##### Multiple Plot #####
 
 ## create subplot 
 fig,ax = plt.subplots(ncols=9,nrows=9)
@@ -56,8 +64,16 @@ ax[i][j].axes.get_yaxis().set_visible(False)
 ## color map
 cmap="gray"
 
+## Super Title
+fig.suptitle('bold figure suptitle', fontsize=14, fontweight='bold')
+
+## Add common axis
+position [0,0] to [1,1] from low left to up right
+fig.text(0.5, 0.1, r'X label', ha='center', va='center',fontsize=20)
+fig.text(0.1, 0.5, r'Y label', ha='center', va='center', rotation='vertical',fontsize=20)
+
 ## save plot
-plt.savefig(r"file_name.png")
+plt.savefig(r"file_name.png",bbox_inches='tight')
 
 #### Additional ####
 
