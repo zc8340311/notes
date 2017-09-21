@@ -1,0 +1,13 @@
+## Set up the pass word
+jupyter notebook --generate-config
+jupyter notebook password
+Enter password: clzcmx520
+
+## At remote remote_user@remote_host$:
+jupyter notebook --no-browser --port=8889
+
+## At local local_user@local_host$  (-f is dangerous, it is hard to kill background listener)
+ssh -N -L localhost:8888:localhost:8889 remote_user@remote_host
+
+## Open browser enter:
+localhost:8888
