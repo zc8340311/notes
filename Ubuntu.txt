@@ -46,6 +46,9 @@ sftp username@host ## start an SFTP session
 
 cat /proc/cpuinfo | grep 'model name' | uniq  ## check CPU
 
+## list how much space left 
+df -h
+
 ## Install PIL Pillow
 apt-get install python-dev
 apt-get install libjpeg-dev
