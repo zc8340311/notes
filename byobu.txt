@@ -1,4 +1,4 @@
-shift-f1 #display help
+shift-f1 #display help careful!
 f2 #create a new window
 ctrl + D # close a window
 shift-f2 # create a horizontal split

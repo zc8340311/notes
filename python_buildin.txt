@@ -1,0 +1,7 @@
+Python Env:
+##create an env, it will create a folder named env on your current folder
+virtualenv env
+## activate env
+source env/bin/activate
+## deactivate
+deactivate

@@ -1,0 +1,30 @@
+Adjust Environment:
+module avail #-show available modules
+module list #-show currently loaded modules
+module add|load    ##load
+module rm|unload
+module show
+
+
+Basic Slurm command, more:(https://slurm.schedmd.com)
+sinfo  #-current state of the compute nodes
+sbatch #-submit a job script
+squeue #-see what is currently running
+scancel #-cancel one of your jobs
+sinteractive #-get an interactive shell on a computer node
+
+
+
+
+
+
+
+### Old turing commands:
+qlogin
+qstat -u czhou2
+
+ln -s /usr/lib64/liblapack.so.3 /home/czhou2/root/lib/liblapack.so
+ln -s /usr/lib64/libblas.so.3 /home/czhou2/root/lib/libblas.so
+
+export BLAS=/home/czhou2/root/lib
+export LAPACK=/home/czhou2/root/lib
