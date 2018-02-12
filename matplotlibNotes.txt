@@ -37,7 +37,7 @@ cmap=cm.coolwarm
 s=250
 
 ##line style
-linestyles = ['-', '--', '-.', ':']
+linestyle = ['-', '--', '-.', ':']
 linestyle=":"
 
 ## Tight layout 
@@ -61,6 +61,13 @@ fig.tight_layout()
 ax[i][j].set_title("title")
 ## set x,y axis visible
 ax[i][j].axes.get_yaxis().set_visible(False)
+
+## set ticks
+ax[i][j].set_xticks(range(10)) #set the location
+ax[i][j].set_xticklabels(range(10),map(str,range(10))) #set the labels
+
+## tight_layout does not go with super title
+fig.tight_layout(rect=[0, 0.03, 1, 0.95])
 
 ## color map
 cmap="gray"

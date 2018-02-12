@@ -1,0 +1,3 @@
+module load singularity
+singularity pull docker://ubuntu:latest
+singularity shell docker://ubuntu:latest

@@ -30,7 +30,7 @@ find . -name "*.rar" -type f  ##recursively find files and delete
 which python
 
 
-top ## show the CPU and memory usepyt
+top ## show the CPU and memory use
 
 scp <file> <username>@<IP address or hostname>:<Destination> #secure file transfer command
 
