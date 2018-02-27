@@ -1,0 +1,17 @@
+## Play with the SSH:
+
+## show the ssh version
+ssh -V
+
+## cd to ssh folder ~/.ssh and list ls -a
+
+## Generate ssh keys
+ssh-keygen
+## add you ssh keys
+ssh-add ~/.ssh/id_rsa
+## list all keys
+ssh-add -l
+
+## copy ssh keys
+cat ~/.ssh/id_rsa.pub | xclip -sel clip
+## then paste the ssh key to the cloud ssh key setting area

@@ -3,46 +3,16 @@ $ cd /path/to/repo
 $ git checkout -b gh-pages ## The branch name gh-pages is a special branch that github uses to get files to build and publish from.
 $ git push origin gh-pages
 
-## published link
-Project link: ["link_name"](https://your_account.github.io/project_name/)
-
-
 ##commit deleted files
 git add -u .
 
 ## set the push command for matching repo which have same name
 git config --global push.default matching
 
-
-## github READ.md format
-![name](link) picture
-[name](link) url link
-## head
-
-
 git clean -fd ## git clean unchanged files
 
 git reset --merge
 git merge master ## merge master branch to current
-
-
-## Play with the SSH:
-
-## show the ssh version
-ssh -V
-
-## cd to ssh folder ~/.ssh and list ls -a
-
-## Generate ssh keys
-ssh-keygen
-## add you ssh keys
-ssh-add ~/.ssh/id_rsa
-## list all keys
-ssh-add -l
-
-## copy ssh keys
-cat ~/.ssh/id_rsa.pub | xclip -sel clip
-## then paste the ssh key to the cloud ssh key setting area
 
 ## Keep a folked repo updated
 git clone git@github.com:YOUR-USERNAME/YOUR-FORKED-REPO.git
